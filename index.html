@@ -35,18 +35,25 @@
     //   "Click me!"
     // );
 
-    const Button = () => (
-      <button onClick={() => console.log("buttonClick")}>Click me!</button>
-    );
+    function render() {
+      ReactDOM.render(<Container />, root);
+    }
 
+    function countUp() {
+      count++;
+      render();
+    }
+
+    const Button = () => <button onClick={countUp}>Click me!</button>;
+
+    let count = 0;
     const container = React.createElement("div", null, [Title, Button]);
     const Container = () => (
       <div>
-        <Title />
+        <div>Total clicks: {count}</div>
         <Button />
       </div>
     );
-
     ReactDOM.render(<Container />, root);
   </script>
 </html>
