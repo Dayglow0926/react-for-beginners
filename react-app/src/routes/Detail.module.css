@@ -1,0 +1,25 @@
+.marvel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.marvel > img {
+  width: 200px;
+}
+
+.marvel__title {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.marvel__url {
+  color: white;
+}
